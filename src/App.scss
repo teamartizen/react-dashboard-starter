@@ -1,0 +1,37 @@
+@import './common/colors.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: $font-primary;
+}
+
+body {
+  background: white;
+}
+
+.app {
+  height: 100%;
+}
+
+.ant-layout {
+  min-height: 100% !important;
+  background: #ffffff !important;
+  height: inherit;
+}
+.ant-layout-content {
+  padding: 50px;
+  min-height: auto;
+}
+
+@media screen and (max-width: 425px) {
+  .ant-layout-content {
+    padding: 50px 30px;
+  }
+}
