@@ -1,7 +1,7 @@
 import axios from "axios";
 import { notification } from "antd";
 
-export const apiBase = "http://localhost:3333";
+export const apiBase = import.meta.env.VITE_API_BASE;
 
 export const apiClient = axios.create({
 	baseURL: apiBase,
@@ -39,7 +39,7 @@ export const setupInterceptor = () => {
 
 			console.log("interceptor error:::", errorObject);
 
-			if (errorObject.path === "/api/auth/me") {
+			if (errorObject.path === "/api/user/me") {
 				return Promise.reject(errorObject);
 			}
 
